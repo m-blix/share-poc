@@ -12,3 +12,23 @@ html, body {
 #container {
   margin: 10px;
 }
+
+#info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #eee;
+  z-index: 100;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+model-viewer {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid #ccc;
+}

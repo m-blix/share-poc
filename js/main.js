@@ -2,9 +2,20 @@
 
 const modelViewer = document.querySelector('model-viewer');
 
-let samples = ['https://modelviewer.dev/shared-assets/models/Astronaut.glb'];
+let modelSamples = ['https://modelviewer.dev/shared-assets/models/Astronaut.glb'];
 
 function load() {
+  let button = document.getElementById('sample-btn');
+  button.addEventListener('click', function(e){
+    let url = modelSamples[0];
+    history.pushState({}, '', `?url=${url}`);
+    processURL();
+  });
+
+  processURL();
+}
+
+function processURL() {
   let params = new URLSearchParams(location.search);
 
   for (const [key, value] of params) {
@@ -18,11 +29,6 @@ function load() {
 
     setModel(url);
   }
-
-  let button = document.getElementById('sample-btn');
-  button.addEventListener('click', function(e){
-    setModel(samples[0]);
-  });
 }
 
 function setModel(url) {
