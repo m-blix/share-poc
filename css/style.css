@@ -10,13 +10,13 @@ html, body {
 }
 
 #container {
-  margin: 10px;
+  margin: 0;
 }
 
 #info {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 5px;
+  left: 5px;
   background-color: #eee;
   z-index: 100;
   padding: 10px;
@@ -30,5 +30,5 @@ h1 {
 model-viewer {
   width: 100%;
   min-height: 500px;
-  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
 }
